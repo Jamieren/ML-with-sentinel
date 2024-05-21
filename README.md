@@ -29,8 +29,9 @@ Machine learning to assist with threat hunting using logs from Microsoft Sentine
 
 ### 8. Deployment and Monitoring
 - **Deploy the model** for real-time threat detection and continuously monitor its performance.
+  
 
-#Step-by-Step Implementation
+## Step-by-Step Implementation
 
 ## Prerequisites
 
