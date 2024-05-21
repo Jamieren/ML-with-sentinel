@@ -8,6 +8,28 @@ Machine learning to assist with threat hunting using logs from Microsoft Sentine
 - **Collect logs** from Microsoft Sentinel or any other logging system.
 - **Understand** the structure and content of the logs.
 
+import pandas as pd
+from azure.identity import DefaultAzureCredential
+from azure.monitor.query import LogsQueryClient
+
+# Authenticate using DefaultAzureCredential
+credential = DefaultAzureCredential()
+client = LogsQueryClient(credential)
+
+# Define your workspace ID and log query
+workspace_id = 'your-workspace-id'
+query = "AzureActivity | where ActivityStatus == 'Failed' | project TimeGenerated, ActivityStatus, CallerIpAddress"
+
+# Query the logs
+response = client.query_workspace(workspace_id, query)
+
+# Convert the response to a pandas DataFrame
+columns = [col.name for col in response.tables[0].columns]
+logs = pd.DataFrame(response.tables[0].rows, columns=columns)
+print(logs.head())
+
+  
+
 ### 2. Data Preprocessing
 - **Clean the data** by handling missing values, removing duplicates, and normalizing data.
 - **Feature engineering** to extract relevant features from the logs.
