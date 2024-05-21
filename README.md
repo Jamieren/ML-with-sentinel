@@ -30,3 +30,17 @@ Machine learning to assist with threat hunting using logs from Microsoft Sentine
 ### 8. Deployment and Monitoring
 - **Deploy the model** for real-time threat detection and continuously monitor its performance.
 
+#Step-by-Step Implementation
+
+## Prerequisites
+
+1. **Azure Subscription**: Ensure you have an active Azure subscription.
+2. **Microsoft Sentinel**: Set up Microsoft Sentinel in your Azure environment.
+3. **Python Environment**: Have Python installed along with necessary libraries.
+
+## Installation
+
+Install the required Python libraries:
+
+```bash
+pip install azure-identity azure-monitor-query pandas scikit-learn
