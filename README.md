@@ -48,4 +48,4 @@ pip install azure-identity azure-monitor-query pandas scikit-learn
 
 ### Implementation
 
-For the complete step-by-step implementation, please refer to the (implementation.py)
+For the complete step-by-step implementation, please refer to the [Link to `implementation.py`](implementation.py)
