@@ -44,6 +44,7 @@ Install the required Python libraries:
 
 ```bash
 pip install azure-identity azure-monitor-query pandas scikit-learn
+```
 
 ### Implementation
 
