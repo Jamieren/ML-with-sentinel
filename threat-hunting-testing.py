@@ -45,4 +45,4 @@
 		# Filter the anomalies
 		anomalies = logs[logs['anomaly'] == -1]
 
-    print(anomalies)
+    		print(anomalies)
